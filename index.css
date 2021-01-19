@@ -1,10 +1,12 @@
 footer{
     background-color: #03091E;
 }
+
 #footer a{
     color: white;
     text-decoration: none;
 }
+
 #footer a:hover{
     text-decoration: underline;
 }
@@ -16,6 +18,34 @@ nav img{
 .text-tickets{
     color: #97c93e !important;
 }
+
 main img{
     max-height: 70vh;
+}
+
+#carousel{
+    position: relative;
+}
+
+#carousel .overlay{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row{
+    height: 100%;
+}
+
+.btn-platzi{
+    background-color: #97c93e;
+    color: white;
+}
+.btn-platzi:hover{
+    background-color: #83b133;
 }
