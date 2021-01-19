@@ -11,31 +11,31 @@
   <title>Mi pagina!</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
   <!--Header-->
-  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="assets/platziLogo.png"><img src="assets/platzi.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+            <a class="nav-link active" aria-current="page" href="#main">La conferencia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Los DJ's</a>
+            <a class="nav-link" href="#speakers">Los DJ's</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">El lugar y la fecha</a>
+            <a class="nav-link" href="#place-time">El lugar y la fecha</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Conviertete en DJ</a>
+            <a class="nav-link" href="#conviertete">Conviertete en DJ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-tickets" href="#">Comprar tickets</a>
+            <a class="nav-link text-tickets" href="#" data-bs-toggle="modal" data-bs-target="#comprartick">Comprar tickets</a>
           </li>
         </ul>
       </div>
@@ -45,7 +45,7 @@
   <!--/Header-->
 
   <!--Main-->
-  <main>
+  <main id="main">
     <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
@@ -76,7 +76,7 @@
                   para ti. Te esperamos!
                 </p>
                 <a href="#" class="btn btn-outline-light">Quiero ser DJ</a>
-                <button type="button" class="btn btn-platzi">Comprar tickets</button>
+                <button type="button" class="btn btn-platzi" data-bs-toggle="modal" data-bs-target="#comprartick">Comprar tickets</button>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@
       <div class="row">
         <div class="col text-center text-uppercase">
           <small>conoce a los</small>
-          <h2>oradores</h2>
+          <h2>DJ's</h2>
         </div>
       </div>
       <div class="row">
@@ -115,7 +115,8 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <div class="card">
-            <img src="https://images2.fanpop.com/images/polls/132000/132524_1224893661419_full.jpg?v=1224893474" class="card-img-top" alt="...">
+            <img src="https://images2.fanpop.com/images/polls/132000/132524_1224893661419_full.jpg?v=1224893474"
+              class="card-img-top" alt="...">
             <div class="card-body">
               <div class="badges mb-0 text-end">
                 <span class="badge bg-danger">Guaracha</span>
@@ -132,7 +133,8 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <div class="card">
-            <img src="https://cdn.eldeforma.com/wp-content/uploads/2020/04/fiona-luchona-meme.jpg" class="card-img-top" alt="...">
+            <img src="https://cdn.eldeforma.com/wp-content/uploads/2020/04/fiona-luchona-meme.jpg" class="card-img-top"
+              alt="...">
             <div class="card-body">
               <div class="badges mb-0 text-end">
                 <span class="badge bg-danger">Guaracha</span>
@@ -174,17 +176,18 @@
     <div class="container-fluid mb-4">
       <div class="row">
         <div class="col-12 col-md-6 p-0">
-          <img src="https://lh3.googleusercontent.com/proxy/4AyBo4J561m7PRVqig8elPPIGN2F-vOVzvU96f0n4LCeiUGAj1EXS5xKHB7NT9mW7HJyfS3X5yDmtM8JtAwCRsmHinVh3kTWzPsloq9grZWuTYHIAsqrm6ZPChNzMoRT9WtJS1na6kNI7xzrFBhnx8r8Yemwb-b7Uybs-A">
+          <img
+            src="https://lh3.googleusercontent.com/proxy/4AyBo4J561m7PRVqig8elPPIGN2F-vOVzvU96f0n4LCeiUGAj1EXS5xKHB7NT9mW7HJyfS3X5yDmtM8JtAwCRsmHinVh3kTWzPsloq9grZWuTYHIAsqrm6ZPChNzMoRT9WtJS1na6kNI7xzrFBhnx8r8Yemwb-b7Uybs-A">
         </div>
         <div class="col-12 col-md-6 pt-3 pb-4 text-center">
           <h2>Rappi Medellin - Diciembre 2018</h2>
           <p>
-            Rappi es una Mega Startup de consumo de alto crecimiento de la Serie C que busca ser la 
-            tienda de todo de América Latina. Somos un mercado que conecta a los usuarios que desean 
-            comprar alimentos preparados, comestibles, ropa y prácticamente cualquier cosa con 
-            contratistas independientes que puedan satisfacer esas necesidades. Aunque somos una 
-            empresa nueva y realmente vivimos la realidad de las startups, ya estamos operando en 
-            Colombia, México, Brazil, Argentina, Uruguay, Chile, Perú, Ecuador & Costa Rica y queremos 
+            Rappi es una Mega Startup de consumo de alto crecimiento de la Serie C que busca ser la
+            tienda de todo de América Latina. Somos un mercado que conecta a los usuarios que desean
+            comprar alimentos preparados, comestibles, ropa y prácticamente cualquier cosa con
+            contratistas independientes que puedan satisfacer esas necesidades. Aunque somos una
+            empresa nueva y realmente vivimos la realidad de las startups, ya estamos operando en
+            Colombia, México, Brazil, Argentina, Uruguay, Chile, Perú, Ecuador & Costa Rica y queremos
             mucho más.
           </p>
           <a href="https://www.rappi.com/jobs/" class="btn btn-outline-light">Conoce más</a>
@@ -193,6 +196,40 @@
     </div>
   </section>
   <!--/Lugar y Fecha-->
+
+  <!--Conviertete en DJ-->
+  <section id="conviertete">
+    <div class="container mb-4">
+      <div class="row">
+        <div class="col text-center text-uppercase">
+          <small>conviertete en un</small>
+          <h2>DJ</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          Anotate como DJ para soltarte los temazos de <abbr data-bs-toggle="tooltip" title="Mejor genero musical del planeta">waracha</abbr>!<br>
+          Cuentanos que temas vas a tocar
+        </div>
+      </div>
+      <div class="row mt-3 ">
+          <div class="col-md-5 col-lg-4 offset-lg-2 offset-md-1 pb-2">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+          </div>
+          <div class="col-md-5 col-lg-4 pb-2">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+          </div>
+          <div class="col-md-10 col-lg-8 offset-lg-2 offset-md-1 pb-3">
+            <textarea class="form-control form-control-lg" placeholder="¿Que temas vas a tocar?"></textarea>
+            <small class="form-text text-muted">Recuerda incluir temaso principal</small>
+          </div>
+          <div class="col-md-10 col-lg-8 offset-lg-2 offset-md-1">
+            <button type="submit" class="btn btn-platzi form-control">Enviar</button>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!--/Conviertete en DJ-->
 
   <!--Footer-->
   <footer id="footer" class="pb-4 pt-4">
@@ -223,9 +260,31 @@
     </div>
   </footer>
   <!--/Footer-->
+
+  <!--Modal-->
+  <div class="modal" id="comprartick" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/Modal-->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
