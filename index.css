@@ -1,0 +1,21 @@
+footer{
+    background-color: #03091E;
+}
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+#footer a:hover{
+    text-decoration: underline;
+}
+
+nav img{
+    width: 60px;
+}
+
+.text-tickets{
+    color: #97c93e !important;
+}
+main img{
+    max-height: 70vh;
+}
