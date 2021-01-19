@@ -49,3 +49,12 @@ main img{
 .btn-platzi:hover{
     background-color: #83b133;
 }
+
+#place-time{
+    background-color: rgb(33,37,41);
+    color: white
+}
+
+#place-time img{
+    width: 100%;
+}
